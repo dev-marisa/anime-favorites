@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/anime-favorites/static/css/main.b8802bca.css",
-    "main.js": "/anime-favorites/static/js/main.6804e692.js",
+    "main.js": "/anime-favorites/static/js/main.9096c9a5.js",
     "static/js/787.8855eca0.chunk.js": "/anime-favorites/static/js/787.8855eca0.chunk.js",
     "index.html": "/anime-favorites/index.html",
     "main.b8802bca.css.map": "/anime-favorites/static/css/main.b8802bca.css.map",
-    "main.6804e692.js.map": "/anime-favorites/static/js/main.6804e692.js.map",
+    "main.9096c9a5.js.map": "/anime-favorites/static/js/main.9096c9a5.js.map",
     "787.8855eca0.chunk.js.map": "/anime-favorites/static/js/787.8855eca0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b8802bca.css",
-    "static/js/main.6804e692.js"
+    "static/js/main.9096c9a5.js"
   ]
 }

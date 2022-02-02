@@ -23,13 +23,13 @@ const App:React.FC = () => {
   return (
     <div>
       <AnimeContext.Provider value={{favorites, setFavorites}}>
-        <h1>Ani-API</h1>
+        <h1>Anime Favorites</h1>
         <Link to="/search">Search</Link>
         {" | "}
         <Link to="/favorites">Your Favorites ({favorites.length})</Link>
         <Routes>
-          <Route path="/search" element={ <Search/> } />
-          <Route path="/favorites" element={ <Favorites/> } />
+          <Route path="/anime-favorites/search" element={ <Search/> } />
+          <Route path="/anime-favorites/favorites" element={ <Favorites/> } />
         </Routes>
       </AnimeContext.Provider>
     </div>
