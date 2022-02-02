@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from "react";
+import { Link, Routes, Route } from "react-router-dom";
+import Search from "./Components/Search";
+import Favorites from "./Components/Favorites";
+import AnimeContext from './AnimeContext';
 
-function App() {
+const App:React.FC = () => {
+
+  const [favorites, setFavorites] = useState([]);
+
+  useEffect(() => {
+    const storedFavorites = localStorage.getItem("favorites");
+    if(storedFavorites) {
+      try {
+        setFavorites(JSON.parse(storedFavorites));
+      } catch(err) {
+        console.log("history corrupted... \n", err);
+        localStorage.removeItem("favorites");
+      }
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AnimeContext.Provider value={{favorites, setFavorites}}>
+        <h1>Ani-API</h1>
+        <Link to="/search">Search</Link>
+        {" | "}
+        <Link to="/favorites">Your Favorites ({favorites.length})</Link>
+        <Routes>
+          <Route path="/search" element={ <Search/> } />
+          <Route path="/favorites" element={ <Favorites/> } />
+        </Routes>
+      </AnimeContext.Provider>
     </div>
   );
 }
