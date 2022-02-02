@@ -1,5 +1,6 @@
 {
-  "name": "ani-api",
+  "name": "anime-favorites",
+  "homepage": "https://dev-marisa.github.io/anime-favorites/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
