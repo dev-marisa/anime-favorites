@@ -24,12 +24,12 @@ const App:React.FC = () => {
     <div>
       <AnimeContext.Provider value={{favorites, setFavorites}}>
         <h1>Anime Favorites</h1>
-        <Link to="/search">Search</Link>
+        <Link to="/anime-favorites/search">Search</Link>
         {" | "}
-        <Link to="/favorites">Your Favorites ({favorites.length})</Link>
+        <Link to="/anime-favorites">Your Favorites ({favorites.length})</Link>
         <Routes>
           <Route path="/anime-favorites/search" element={ <Search/> } />
-          <Route path="/anime-favorites/favorites" element={ <Favorites/> } />
+          <Route path="/anime-favorites" element={ <Favorites/> } />
         </Routes>
       </AnimeContext.Provider>
     </div>
